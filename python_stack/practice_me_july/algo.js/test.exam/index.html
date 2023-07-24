@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plush Store </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+<div class="nav1">
+
+   
+    <h1 class="title1">FREE PHONE GRIP ON SELECT PURSHASES</h1>
+<!-- ---------------------------------------- -->
+</div>
+<div class="nav2">
+     <h1 class="title2">PlushStar</h1>
+        <input type="text" class="search" name="search" 
+        placeholder="Search" >
+        <div class="img1">
+        <h4><span class="number">0</span></h4>
+        <img class="image1" src="./images/cart-dark.png" alt="">
+</div>
+</div>
+
+<!---------------------------------  ------------------------------- -->
+<div class="nav3">
+    <ul class="element" >
+        <li>Home</li>
+        <li>New</li>
+        <li >Products</li>
+        <li>Sales</li>
+        <li>Blog</li>
+        <li onclick="alertt()">Contact US</li>
+    </ul>
+</div>
+
+
+<!------------------  -------------------------------------------  -  -->
+<div class="nav4">
+<h1 class="plushy">Plushy Store</h1>
+</div>
+<!------------------  -------------------------------------------  -  -->
+
+<div class="main">
+
+<div class="prg">
+<p> 62 Products, sorted by <span class="sp">Best Selling</span></p></div>
+<!------------------  -------------------------------------------  -  -->
+
+<div class="pi">
+    <p>Sort By</p><br> <br>
+<select class="best" onchange="sort(this)">
+    <option >Best Selling</option> 
+    <option>Price</option> 
+</select></div>
+</div>
+<!------------------  -------------------------------------------  -  -->
+<div class="four-image">
+    <div class="position">
+    <img class="product" src="./images/product-image.png" alt="product">
+    <h3 class="T1">Mischief Mouse</h3></div>
+    <!------------------  -------------------------------------------  -  -->
+<div class="position">
+        <img class="product" src="./images/product-image.png" alt="product">
+        <h3 class="T1">Sky Shrew</h3></div>
+<div class="position">
+            <img class="product" src="./images/product-image.png" alt="product">
+            <h3 class="T1">Hangry Hamster</h3></div>
+<div class="position">
+                <img class="product" src="./images/product-image.png" alt="product">
+                <h3 class="T1">Chilly Chinchilla</h3></div>
+
+</div>
+<!------------------  -------------------------------------------  -  -->
+
+<br>
+<div class="btn">
+<button onclick="add()" class="bouton">Buy</button>
+<button onclick="add()" class="bouton">Buy</button>
+<button onclick="add()" class="bouton">Buy</button>
+<button onclick="add()" class="bouton">Buy</button>
+</div>
+
+</div>
+<!------------------  -------------------------------------------  -  -->
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
