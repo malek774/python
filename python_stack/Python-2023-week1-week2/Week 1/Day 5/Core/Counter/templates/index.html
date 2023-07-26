@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Counter App</title>
+</head>
+<body>
+    <h1>Counter: {{ counter }}</h1>
+    <form action="{{ url_for('increment') }}" method="POST">
+        <button type="submit">+2</button>
+    </form>
+    <form action="{{ url_for('destroy_session') }}">
+        <button type="submit">Reset</button>
+    </form>
+</body>
+</html>

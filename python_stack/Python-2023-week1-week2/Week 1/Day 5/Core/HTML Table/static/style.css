@@ -1,0 +1,11 @@
+.header {
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 30px;
+}
+table {
+    width: 50% !important;
+    margin: 0 auto;
+    margin-top:  50px;
+}

@@ -1,0 +1,9 @@
+h1 , h4 ,form{
+    text-align: center;
+}
+input,button {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    margin-top: 40px;
+}
