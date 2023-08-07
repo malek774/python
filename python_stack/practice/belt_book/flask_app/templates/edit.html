@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+</head>
+<body>
+    <div class="d_flex justify-content-between m-5">
+        <h1>CHANGE YOUR ENTRY</h1>
+        <div>
+            <a href="/books" class="btn btn-secondary">BACK TO THE SHEVELEVES</a>
+        </div>
+    </div>
+    <div class=" col-6 m-5">
+        <div>
+            {% for message in get_flashed_messages() %}
+            <p href="" class="text-warning">{{message}}</p>
+            {%endfor%}
+        </div>
+        <form action="/books/{{book.id}}/update" method="post" >
+            <div class="form-group">
+                <label for="">TITLE</label>
+                <input type="text" name="title" class="form-control" value="{{book.title}}">
+            </div>
+            <div class="form-group">
+                <label for="">author</label>
+                <input type="text" name="author" class="form-control" value="{{book.author}}">
+            </div>
+            <div class="form-group">
+                <label for=""> my thoughts</label>
+                <textarea name="thought" id="" cols="30" rows="10" class="form-control">{{book.thought}}</textarea>
+            </div>
+            <input type="hidden" name="id" value="{{book.id}}">
+        <input type="submit" value="add book" class="btn btn-secondary">
+        
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
