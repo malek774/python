@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - User Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">QuickFlip Admin</a>
+</nav>
+
+<div class="container mt-4">
+    <h2>User Management</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>addsress 1</td>
+                <td>
+                    <button class="btn btn-sm btn-primary details-btn">Details</button>
+                    <button class="btn btn-sm btn-primary edit-btn">Edit</button>
+                    <button class="btn btn-sm btn-danger delete-btn">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>address 2</td>
+                <td>
+                    <button class="btn btn-sm btn-primary details-btn">Details</button>
+                    <button class="btn btn-sm btn-primary edit-btn">Edit</button>
+                    <button class="btn btn-sm btn-danger delete-btn">Delete</button>
+                </td>
+            </tr>
+            <!-- Add more rows for other users -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Add event listeners to the buttons
+    const detailsButtons = document.querySelectorAll('.details-btn');
+    const editButtons = document.querySelectorAll('.edit-btn');
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+
+    // Function to handle button click events
+    function handleButtonClick(event) {
+        const userId = event.target.closest('tr').querySelector('td:first-child').textContent;
+        const action = event.target.textContent.toLowerCase();
+
+        if (action === 'details') {
+            // Handle details action
+            openDetailsModal(userId);
+        } else if (action === 'edit') {
+            // Handle edit action
+            openEditModal(userId);
+        } else if (action === 'delete') {
+            // Handle delete action
+            openDeleteConfirmation(userId);
+        }
+    }
+
+    // Attach click event listeners to the buttons
+    detailsButtons.forEach(button => button.addEventListener('click', handleButtonClick));
+    editButtons.forEach(button => button.addEventListener('click', handleButtonClick));
+    deleteButtons.forEach(button => button.addEventListener('click', handleButtonClick));
+
+    // Function to open the details modal
+    function openDetailsModal(userId) {
+        // Implement your logic here to display details modal
+        alert(`Details clicked for user with ID ${userId}`);
+    }
+
+    // Function to open the edit modal
+    function openEditModal(userId) {
+        // Implement your logic here to display edit modal
+        alert(`Edit clicked for user with ID ${userId}`);
+    }
+
+    // Function to open the delete confirmation
+    function openDeleteConfirmation(userId) {
+        const confirmed = confirm(`Are you sure you want to delete user with ID ${userId}?`);
+        
+        if (confirmed) {
+            // Implement your logic here to delete the user
+            alert(`User with ID ${userId} has been deleted.`);
+        }
+    }
+</script>
+</body>
+</html>
